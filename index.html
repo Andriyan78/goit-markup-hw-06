@@ -62,12 +62,34 @@
         <button data-modal-open type="button" class="request">Request our service</button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
+            <form action="Registr" class="reg">
+              <div class="formfield">
+              <label>Name<input type="text" name="name" 
+                placeholder="Peter"></label>
+              </div>
+              <div class="formfield">
+              <label>Telephone<input type="tel" 
+                name="tel" placeholder="+380"></label>
+              </div>
+              <div class="formfield">
+              <label>E-mail<input type="e-mail" 
+                name="mail" placeholder="r@gmail.com"></label>
+              </div>              
+              <div class="formfield">
+              <label for="comment">Comments</label>
+              <textarea name="comment" id="comment" rows="10"
+              placeholder="Type your message here">             
+              </textarea>
+              </div>
+
+              <button type="submit" class="butsub">Send</button>
+
+            </form>
                         
             <button data-modal-close class="close-btn">x</button>
           </div>
         </div>
        </div>
-
       </section>
       <!--Особливості-->
       <section class="section">
@@ -448,6 +470,13 @@
                                 
               </li>
             </ul>                 
+          </div>
+          <div class="subscribe">  
+            <p class="subnews">Subscribe to the newsletter</p> 
+            <div class="subfieldbut">         
+              <label><input type="e-mail" name="mail" placeholder="r@gmail.com"></label>
+              <button type="submit" class="subbutnews">Subscribe</button>
+          </div>
           </div>          
         </div>
     </footer>

@@ -68,6 +68,9 @@ img{
     margin-right: auto;
     padding: 0px 15px;
 }
+textarea{
+    resize: none;
+}
 /* Секції */
 .team-section, .section{
     padding-top: 94px;
@@ -254,6 +257,52 @@ img{
     padding: 15px;
     background-color: var(--btnlet-color);
 }
+.reg{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: var(--btnlet-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+                0px 1px 1px rgba(0, 0, 0, 0.14), 
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    
+}
+.formfield{   
+    
+    border-radius: 4px;
+    outline: 2px solid blue;
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 5px; 
+}
+.formfield label{
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+}
+.formfield input{
+    margin: 0;
+    padding: 6px 18px;
+    width: 100%;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+}
+.butsub{
+    width: 200px;
+    height: 50px;
+    font-weight: 700px;
+    font-size: 16px;
+    line-height: calc(30/16);
+    background-color: var(--btnbg-color);
+    text-align: center;
+    color: var(--btnlet-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+}
 .close-btn{
     position: absolute;
     top: 8px;
@@ -276,7 +325,7 @@ img{
 .title{
     font-size: 16px;
 }
-.title-features, .hat-title, .title-features-foot,.team-title, .name{
+.title-features, .hat-title, .title-features-foot,.team-title, .subnews, .name{
     text-transform: uppercase;
 }
 .team-title {
@@ -494,7 +543,8 @@ img{
     transform: translateY(101%); 
     transition: transform 250ms var(--timing-function);  
 }
-.project:hover .product-overlay{
+.project:hover .product-overlay,
+.project:focus .product-overlay{
     transform: translateY(0);    
 }
 .project:hover,
@@ -585,7 +635,7 @@ img{
 .contacttel:focus {
     color: var(--btnbg-color);
 }
-.footmedia{
+.footmedia, .subscribe{
     color: var(--btnlet-color);
 }
 .icon-foot {
@@ -606,7 +656,7 @@ img{
 .icon-foot:focus {
     background-color: var(--btnbg-color);     
 }
-.title-features-foot{
+.title-features-foot, .subnews{
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16/14);
@@ -618,6 +668,46 @@ img{
     justify-content: space-between;
     align-items: center;
     width: 206px;    
+}
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+   
+    
+}
+.subfieldbut{
+    display: inline-flex;
+     width: 100%;
+    
+}
+.subfieldbut label{
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+
+}
+.subfieldbut input {
+    margin: 0;
+    padding: 6px 18px;
+    width: 100%;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+}
+.subbutnews{
+    font-size: 16px;
+    font-weight: 700px;
+    line-height: calc(30/16);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    background-color: var(--btnbg-color);
+    color: var(--btnlet-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
 }
 .footer{
     display: flex;
