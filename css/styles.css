@@ -257,7 +257,7 @@ textarea{
     padding: 15px;
     background-color: var(--btnlet-color);
 }
-.reg{
+.form{
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -265,31 +265,55 @@ textarea{
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    
+    border-radius: 4px;    
 }
-.formfield{   
-    
+.form-field{position: relative;
     border-radius: 4px;
-    outline: 2px solid blue;
+    /* outline: 2px solid blue; */
     display: flex;
-    flex-direction: column; 
-    margin-bottom: 5px; 
+    flex-direction: column;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
 }
-.formfield label{
+.form-label{
+    
+    /* outline: 2px solid red; */
+    text-align: start;
+    top: 0;
+    left: 0;
     margin-bottom: 10px;
     font-size: 12px;
     line-height: calc(14/12);
     letter-spacing: 0.01em;
 }
-.formfield input{
+.form-input, .form textarea{
+    /* outline: 2px solid brown; */
     margin: 0;
     padding: 6px 18px;
+    padding-left: 30px;
     width: 100%;
     font-size: 12px;
     line-height: calc(14/12);
     letter-spacing: 0.01em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
 }
+.form-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 20px);
+}
+.form-field:focus-within>.form-icon{
+    fill: #188ce8;
+}
+.form-field:focus-within>.form-input {
+    border: var(--btnbg-color);
+}
+/* .form-label:hover ~ .form-icon{
+    border: #188ce8;
+    fill: #188ce8;
+} */
 .butsub{
     width: 200px;
     height: 50px;
