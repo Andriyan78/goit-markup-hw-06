@@ -63,40 +63,51 @@
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <form action="Registr" class="form">
-              <div class="form-field">
+              
+                <label class="form-field">
+                  <span class="form-label">Name</span>
+                  <input type="text" class="form-input" name="name" 
+                />
                 <svg class="form-icon" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-person-black-18dp-1"></use>
-                </svg>
-              <label class="form-label">Name<input type="text" class="form-input" name="name" 
-                />
-                
-              </label>
-              </div>
+                </svg>                            
+                </label>
+              
 
-              <div class="form-field">
+              <label class="form-field">
+                <span class="form-label">Telephone</span>
+                <input type="tel" class="form-input"
+                name="tel" placeholder="+3" />
                 <svg class="form-icon" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-phone-black-18dp-1"></use>
-                </svg>
-              <label class="form-label">Telephone<input type="tel" class="form-input"
-                name="tel" placeholder="+3" /></label>
+                </svg>              
+              </label>
                 
-              </div>
+              
 
-              <div class="form-field">
+              <label class="form-field">
+                <span class="form-label">E-mail</span> 
+               <input type="e-mail" class="form-input"
+                name="mail" />
                 <svg class="form-icon" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-email-black-18dp-1"></use>
-                </svg>
-              <label class="form-label">E-mail<input type="e-mail" class="form-input"
-                name="mail" /></label>
-                
-              </div>    
+                </svg>                             
+              </label>    
 
-              <div class="form-field">
-              <label class="form-label">Comments
-              <textarea name="comment" rows="10" 
-              placeholder = "Enter the text">             
-              </textarea></label>
-              </div>
+              <label class="form-field">
+                <span class="form-label">Comments</span> 
+                <textarea name="comment" rows="5" class="form-input"
+              placeholder = "Enter the text"></textarea>                                       
+              </label>
+
+              <label class="checkbox-label">
+                <input class="checkbox" type="checkbox" name="agree" value="agree"/>
+                <svg class="check-icon" width="16" height="15">
+                <use href="./images/symbol-defs.svg#icon-icon-check"></use>
+              </svg>
+              I agree with the newsletter and accept the Terms and Conditions
+              </label>
+              
 
               <button type="submit" class="butsub">Send</button>
 
@@ -489,10 +500,14 @@
           </div>
           <div class="subscribe">  
             <p class="subnews">Subscribe to the newsletter</p> 
-            <div class="subfieldbut">         
-              <label><input type="e-mail" name="mail" placeholder="r@gmail.com"></label>
-              <button type="submit" class="subbutnews">Subscribe</button>
-          </div>
+            <label class="subfieldbut">         
+              <input type="e-mail" name="mail" placeholder=" "></label>
+              
+                <svg class="subbtn" width="200" height="50">
+                  <use href="./images/symbol-defs.svg#icon-button" class="sub-icon"></use>
+                </svg>
+              
+            </label>
           </div>          
         </div>
     </footer>

@@ -261,32 +261,33 @@ textarea{
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
+    margin-bottom: 20px;
     background-color: var(--btnlet-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;    
 }
-.form-field{position: relative;
+.form-field{
+    position: relative;
     border-radius: 4px;
     /* outline: 2px solid blue; */
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-    flex-wrap: wrap;
-}
-.form-label{
-    
-    /* outline: 2px solid red; */
+    display: block;
+    flex-direction: column;    
     text-align: start;
-    top: 0;
-    left: 0;
+}
+.form-label{    
+    /* outline: 2px solid red; */
+    
+    /* top: 50;
+    left: 40; */
     margin-bottom: 10px;
     font-size: 12px;
     line-height: calc(14/12);
     letter-spacing: 0.01em;
+    transform: translateY(-50%);
 }
-.form-input, .form textarea{
+.form-input{
     /* outline: 2px solid brown; */
     margin: 0;
     padding: 6px 18px;
@@ -300,20 +301,65 @@ textarea{
 }
 .form-icon{
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(10px, 20px);
+    top: 50%;
+    left: 10px;    
+    display: inline-block;
 }
-.form-field:focus-within>.form-icon{
-    fill: #188ce8;
+.form-field:focus-within .form-icon{
+    fill: var(--btnbg-color);
 }
-.form-field:focus-within>.form-input {
-    border: var(--btnbg-color);
+.form-field:focus-within .form-input {
+    outline: 1px solid var(--btnbg-color);
 }
-/* .form-label:hover ~ .form-icon{
-    border: #188ce8;
-    fill: #188ce8;
+.checkbox{
+    appearance: none;
+    position: absolute;
+
+}
+.checkicon{
+    position: absolute;
+    display: inline-block;
+    /* margin-right: 5px; */
+    bottom: 200px;
+    left: 37px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--h-color);
+    border-radius: 4px;
+}
+/* .check-icon{
+    position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
 } */
+.checkbox-label{
+    display: inline-block;
+    font: inherit;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.checkbox:checked .check-icon{
+    position: absolute;
+    display: inline-block;
+    /* margin-right: 5px; */
+    bottom: 190px;
+    left: 35px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--h-color);
+    border-radius: 4px;
+       
+}
+
 .butsub{
     width: 200px;
     height: 50px;
@@ -675,7 +721,6 @@ textarea{
     cursor: pointer;
     transition: background-color 250ms var(--timing-function);
 }
-
 .icon-foot:hover,
 .icon-foot:focus {
     background-color: var(--btnbg-color);     
@@ -694,32 +739,39 @@ textarea{
     width: 206px;    
 }
 .subscribe{
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-   
-    
+    margin-left: auto;     
 }
+
 .subfieldbut{
-    display: inline-flex;
-     width: 100%;
-    
-}
-.subfieldbut label{
     font-size: 12px;
     line-height: calc(14/12);
     letter-spacing: 0.01em;
-
 }
+
 .subfieldbut input {
+    position: absolute;
+    right: 50px;
     margin: 0;
     padding: 6px 18px;
     width: 100%;
+    height: 44px;
     font-size: 12px;
     line-height: calc(14/12);
     letter-spacing: 0.01em;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
-.subbutnews{
+.subbtn{
+    position: absolute;
+    right: -150px;
+    bottom: -50px;
+}
+/* .subbutnews{
     font-size: 16px;
     font-weight: 700px;
     line-height: calc(30/16);
@@ -732,7 +784,7 @@ textarea{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
-}
+} */
 .footer{
     display: flex;
     align-items: baseline; 
