@@ -311,34 +311,35 @@ textarea{
 .form-field:focus-within .form-input {
     outline: 1px solid var(--btnbg-color);
 }
-.checkbox{
+/* .checkbox{
     appearance: none;
     position: absolute;
 
-}
-.checkicon{
+} */
+.check-icon{
     position: absolute;
     display: inline-block;
     /* margin-right: 5px; */
-    bottom: 200px;
-    left: 37px;
+    bottom: 0px;
+    left: 0;
     width: 16px;
     height: 15px;
     border: 2px solid var(--h-color);
     border-radius: 4px;
+    opacity: 0;    
 }
-/* .check-icon{
+.check-opacity{
     position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-} */
+        display: inline-block;
+        /* margin-right: 5px; */
+        bottom: 200px;
+        left: 37px;
+        width: 16px;
+        height: 15px;
+        border: 2px solid var(--h-color);
+        border-radius: 4px;
+}
+
 .checkbox-label{
     display: inline-block;
     font: inherit;
@@ -357,7 +358,7 @@ textarea{
     height: 15px;
     border: 2px solid var(--h-color);
     border-radius: 4px;
-       
+    opacity: 1;         
 }
 
 .butsub{
