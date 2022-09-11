@@ -268,29 +268,35 @@ textarea{
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;    
 }
+.form-head{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--h-color);
+    margin-bottom: 12px;
+}
 .form-field{
     position: relative;
     border-radius: 4px;
-    /* outline: 2px solid blue; */
+    width: 100%;
+    height: 58px;    
     display: block;
     flex-direction: column;    
     text-align: start;
+    margin-bottom: 10px;
 }
 .form-label{    
-    /* outline: 2px solid red; */
-    
-    /* top: 50;
-    left: 40; */
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     font-size: 12px;
     line-height: calc(14/12);
-    letter-spacing: 0.01em;
-    transform: translateY(-50%);
+    letter-spacing: 0.01em;   
 }
 .form-input{
     /* outline: 2px solid brown; */
     margin: 0;
-    padding: 6px 18px;
+    padding: 10px 18px;
     padding-left: 30px;
     width: 100%;
     font-size: 12px;
@@ -311,56 +317,45 @@ textarea{
 .form-field:focus-within .form-input {
     outline: 1px solid var(--btnbg-color);
 }
-/* .checkbox{
-    appearance: none;
+.checkbox{    
     position: absolute;
-
-} */
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+}
+.checkbox-label{
+    width: 425px;
+    position: absolute;
+    bottom: 90px;
+    left: 40px;   
+    text-align: start;  
+}
 .check-icon{
-    position: absolute;
     display: inline-block;
-    /* margin-right: 5px; */
-    bottom: 0px;
-    left: 0;
     width: 16px;
     height: 15px;
     border: 2px solid var(--h-color);
     border-radius: 4px;
-    opacity: 0;    
 }
-.check-opacity{
-    position: absolute;
-        display: inline-block;
-        /* margin-right: 5px; */
-        bottom: 200px;
-        left: 37px;
-        width: 16px;
-        height: 15px;
-        border: 2px solid var(--h-color);
-        border-radius: 4px;
-}
-
-.checkbox-label{
-    display: inline-block;
+.checkbox{     
     font: inherit;
     line-height: calc(24/14);
     letter-spacing: 0.03em;
     margin-bottom: 30px;
-    margin-top: 20px;
+    margin-top: 20px;   
 }
-.checkbox:checked .check-icon{
-    position: absolute;
-    display: inline-block;
-    /* margin-right: 5px; */
-    bottom: 190px;
-    left: 35px;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--h-color);
-    border-radius: 4px;
-    opacity: 1;         
+.checkbox:checked + .check-icon{   
+    background-image: url(../images/iconcheck.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--btnbg-color);
 }
-
 .butsub{
     width: 200px;
     height: 50px;
@@ -373,6 +368,7 @@ textarea{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
+    margin-top: 100px;
 }
 .close-btn{
     position: absolute;
@@ -381,7 +377,12 @@ textarea{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: none;
+    border: none; 
+}
+.close-btn:hover,
+.close-btn:focus{
+   fill: var(--btnbg-color);
+
 }
 
 /* Інші секції */
@@ -396,7 +397,8 @@ textarea{
 .title{
     font-size: 16px;
 }
-.title-features, .hat-title, .title-features-foot,.team-title, .subnews, .name{
+.title-features, .hat-title, .title-features-foot,
+.team-title, .sub-head, .name{
     text-transform: uppercase;
 }
 .team-title {
@@ -444,16 +446,15 @@ textarea{
     position: relative;    
 }
 .name{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16.41/14);
     letter-spacing: 0.03em;        
 }
 .product-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 0;
     width: 370px;
@@ -662,9 +663,12 @@ textarea{
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
 .address{    
-    max-width: 231px;
-    
+    max-width: 231px;    
 }
 .adr{
     margin-right: 70px;
@@ -726,12 +730,13 @@ textarea{
 .icon-foot:focus {
     background-color: var(--btnbg-color);     
 }
-.title-features-foot, .subnews{
+.title-features-foot, .sub-head{
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16/14);
     letter-spacing: 0.03em;
     margin-bottom: 20px;
+    color: var(--btnlet-color);
 }
 .socialmedia-foot{
     display: flex;
@@ -739,53 +744,28 @@ textarea{
     align-items: center;
     width: 206px;    
 }
-.subscribe{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;     
+.sub-input{
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
 }
-
-.subfieldbut{
-    font-size: 12px;
-    line-height: calc(14/12);
-    letter-spacing: 0.01em;
+.sub-label{
+    display: flex; 
+    justify-content: space-between;
+    
 }
-
-.subfieldbut input {
-    position: absolute;
-    right: 50px;
-    margin: 0;
-    padding: 6px 18px;
-    width: 100%;
-    height: 44px;
-    font-size: 12px;
-    line-height: calc(14/12);
-    letter-spacing: 0.01em;
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-}
-.subbtn{
-    position: absolute;
-    right: -150px;
-    bottom: -50px;
-}
-/* .subbutnews{
-    font-size: 16px;
-    font-weight: 700px;
-    line-height: calc(30/16);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
+.sub-button{
+    width: 200px;  
+    height: 50px;  
     background-color: var(--btnbg-color);
-    color: var(--btnlet-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-} */
+    border-radius: 4px;   
+    border: 1px solid #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   
+}
+
+
 .footer{
     display: flex;
     align-items: baseline; 

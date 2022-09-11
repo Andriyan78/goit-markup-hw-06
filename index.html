@@ -63,11 +63,12 @@
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <form action="Registr" class="form">
+              <h2 class="form-head">Leave your information and we'll call you back</h2>
               
                 <label class="form-field">
                   <span class="form-label">Name</span>
                   <input type="text" class="form-input" name="name" 
-                />
+                placeholder=" " />
                 <svg class="form-icon" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-person-black-18dp-1"></use>
                 </svg>                            
@@ -77,7 +78,7 @@
               <label class="form-field">
                 <span class="form-label">Telephone</span>
                 <input type="tel" class="form-input"
-                name="tel" placeholder="+3" />
+                name="tel" placeholder=" " />
                 <svg class="form-icon" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-phone-black-18dp-1"></use>
                 </svg>              
@@ -88,7 +89,7 @@
               <label class="form-field">
                 <span class="form-label">E-mail</span> 
                <input type="e-mail" class="form-input"
-                name="mail" />
+                name="mail" placeholder=" "  />
                 <svg class="form-icon" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-email-black-18dp-1"></use>
                 </svg>                             
@@ -101,19 +102,21 @@
               </label>
 
               <label class="checkbox-label">
-                <input class="checkbox" type="checkbox" name="agree" value="agree"/>
-                <span class="check-opacity"><svg class="check-icon" width="16" height="15">
-                <use href="./images/symbol-defs.svg#icon-icon-check"></use>
-              </svg></span>
-              I agree with the newsletter and accept the Terms and Conditions
+                <input class="checkbox" type="checkbox" />
+                <span class="check-icon"></span>                
+                I agree with the newsletter and accept the Terms and Conditions
               </label>
-              
+
+                          
 
               <button type="submit" class="butsub">Send</button>
 
             </form>
                         
-            <button data-modal-close class="close-btn">x</button>
+            <button data-modal-close class="close-button">
+              <svg class="close-btn" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-close-1"></use>
+               </svg> </button>
           </div>
         </div>
        </div>
@@ -498,17 +501,19 @@
               </li>
             </ul>                 
           </div>
-          <div class="subscribe">  
-            <p class="subnews">Subscribe to the newsletter</p> 
-            <label class="subfieldbut">         
-              <input type="e-mail" name="mail" placeholder=" "></label>
-              
-                <svg class="subbtn" width="200" height="50">
-                  <use href="./images/symbol-defs.svg#icon-button" class="sub-icon"></use>
-                </svg>
+          <form action="subscribe">
+            <h3 class="sub-head">subscribe to the newsletter</h3>
+            <label class="sub-label">
+                <input type="text" class="sub-input" name="name" 
+                placeholder="E-mail" />   
+                <button class="sub-button">
+              <svg class="sub-btn" width="124" height="30">
+                <use href="./images/symbol-defs.svg#icon-Group-1"></use>
+               </svg> 
+              </button>          
               
             </label>
-          </div>          
+          </form>
         </div>
     </footer>
     <script src="./js/modal.js"></script>
