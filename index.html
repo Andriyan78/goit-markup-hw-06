@@ -62,10 +62,10 @@
         <button data-modal-open type="button" class="request">Request our service</button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <form action="Registr" class="form">
+            <form name="registr-form" class="form" autocomplete="on">
               <h2 class="form-head">Leave your information and we'll call you back</h2>
               
-                <label class="form-field">
+                <label class="form-item">
                   <span class="form-label">Name</span>
                   <input type="text" class="form-input" name="name" 
                 placeholder=" " />
@@ -75,7 +75,7 @@
                 </label>
               
 
-              <label class="form-field">
+              <label class="form-item">
                 <span class="form-label">Telephone</span>
                 <input type="tel" class="form-input"
                 name="tel" placeholder=" " />
@@ -86,7 +86,7 @@
                 
               
 
-              <label class="form-field">
+              <label class="form-item">
                 <span class="form-label">E-mail</span> 
                <input type="e-mail" class="form-input"
                 name="mail" placeholder=" "  />
@@ -95,7 +95,7 @@
                 </svg>                             
               </label>    
 
-              <label class="form-field">
+              <label class="form-itemcom">
                 <span class="form-label">Comments</span> 
                 <textarea name="comment" rows="5" class="form-input"
               placeholder = "Enter the text"></textarea>                                       
@@ -113,10 +113,11 @@
 
             </form>
                         
-            <button data-modal-close class="close-button">
-              <svg class="close-btn" width="18" height="18">
+            <button class="modal-btn" type="button" data-modal-close >
+              <svg width="20" height="20" >
                 <use href="./images/symbol-defs.svg#icon-close-1"></use>
-               </svg> </button>
+               </svg> 
+            </button>
           </div>
         </div>
        </div>
