@@ -388,6 +388,7 @@ textarea{
     border-radius: 50%;
     border: none; 
     transition: fill 250ms var(--timing-function);
+    cursor: pointer;
 }
 .modal-btn:hover,
 .modal-btn:focus{
