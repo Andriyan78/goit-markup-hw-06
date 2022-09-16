@@ -61,6 +61,7 @@
          <h1 class="hat-title">effective solutions for your business</h1>
         <button data-modal-open type="button" class="request">Request our service</button>
         <div class="backdrop is-hidden" data-modal>
+         
           <div class="modal">
 
             <form name="registr-form" class="form" autocomplete="on">
@@ -100,10 +101,10 @@
                 <textarea name="comment" rows="5" class="form-message"
               placeholder = "Enter the text"></textarea>                                       
               </label>
-
                 </div>
+                
               <label class="form-agreement">
-                <input class="form-checkbox"  visuaally hidden type="checkbox" name="" id="usercheckbox"/>
+                <input class="form-checkbox visually-hidden"   type="checkbox" name="" id="usercheckbox"/>
                 <svg class="form-icons" width="20" height="20">
                  <use class="icon-checked" href="./images/symbol-defs.svg#icon-icon-checked"></use>
                  <use class="icon-unchecked" href="./images/symbol-defs.svg#icon-Unchecked"></use>
@@ -505,18 +506,23 @@
               </li>
             </ul>                 
           </div>
-          <form action="subscribe">
-            <h3 class="sub-head">subscribe to the newsletter</h3>
-            <label class="sub-label">
+          <form class="subscribe">
+            <p class="sub-head">Subscribe to the newsletter</p>
+            
+            <div class="subscription">
+              <label class="sub-label">
                 <input type="text" class="sub-input" name="name" 
-                placeholder="E-mail" />   
+                placeholder="E-mail" /> 
+            </label>
+
                 <button class="sub-button">Subscribe
               <svg class="sub-btn" width="24" height="24">
                 <use href="./images/symbol-defs.svg#icon-icon-send"></use>
                </svg> 
-              </button>          
+              </button>       
+            </div>   
               
-            </label>
+            
           </form>
         </div>
     </footer>

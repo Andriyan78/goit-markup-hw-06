@@ -90,6 +90,7 @@ textarea{
 .area-link.webstudio{
     padding-top: 24px;
     padding-bottom: 24px;
+    
 }
 .accent{
     color: var(--h-color)
@@ -97,10 +98,10 @@ textarea{
 .accent-foot{
     color: var(--btnlet-color);
 }
-.link:hover,
+/* .link:hover,
 .link:focus{
     color: var(--btnbg-color);
-}
+} */
 .main-nav{
     display: flex;
     align-items: center;
@@ -234,14 +235,14 @@ textarea{
     height: 100%;  
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: transform 250ms var(--timing-function);
+    transition: visibility 250ms var(--timing-function), 
+    opacity 250ms var(--timing-function);
 }
 .backdrop.is-hidden{
-    position: relative;
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: transform 250ms var(--timing-function);
+    
 }
 .backdrop.is-hidden.modal{
     transform: translate(-50%, -50%);
@@ -253,7 +254,7 @@ textarea{
     transform: translate(-50%,-50%);
     transition: transform 250ms var(--timing-function);   
     width: 528px;
-    
+    padding: 40px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -262,12 +263,8 @@ textarea{
 }
 .form{
     width: 448px;
-    height: 581px;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding: 0;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    min-height: 581px;   
+    padding: 0;    
     background-color: var(--btnlet-color);
     /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
@@ -282,8 +279,7 @@ textarea{
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--h-color);
-    margin-bottom: 25px;
-    margin-top: 40px;
+    margin-bottom: 25px;    
     margin-left: 0;
     margin-right: 0;
 }
@@ -334,25 +330,29 @@ textarea{
     top: 50%;
     left: 10px;    
     display: inline-block;
-    margin-bottom: 11px;
+    
     transition: fill 250ms var(--timing-function);
 }
 .form-item:focus-within .form-icon{
     fill: var(--btnbg-color);
 }
 .form-item:focus-within .form-input {
-    outline: 1px solid var(--btnbg-color);
+    outline: none;
+    border: 1px solid var(--btnbg-color);
+}
+.form-item:focus-within .form-message {
+    outline: none;
+    border: 1px solid var(--btnbg-color);
 }
 .form-agreement{ 
     position: absolute;
-    bottom: 60px;
+    bottom: 100px;    
     display: flex;  
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    width: 425px;     
-    text-align: start;  
+    align-items:flex-start;
+    justify-content: center;    
+    width: 423px;
+    /* margin-bottom: 20px; */
+    
 }
 .icon-checked{
     opacity: 0;
@@ -374,9 +374,10 @@ textarea{
     opacity: 0;
 }
 .form-desc{   
-    display: inline-block;
+    /* display: inline-block; */
     line-height: calc(24/14);   
-    user-select: none;    
+    user-select: none; 
+    padding: 0   
 }
 .form-checkbox{          
     font: inherit;
@@ -401,7 +402,12 @@ textarea{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
-    margin: 0 auto;    
+    margin: 0 auto;  
+    cursor: pointer;  
+}
+.form-btn:hover,
+.form-btn:focus{
+    background-color: #188ce8;
 }
 .modal-btn{
     display: flex;
@@ -418,7 +424,7 @@ textarea{
     background-color: var(--btnlet-color); 
     transition: fill 250ms var(--timing-function);
     cursor: pointer;
-    box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 .modal-btn:hover,
 .modal-btn:focus{
@@ -784,16 +790,22 @@ textarea{
     align-items: center;
     width: 206px;    
 }
-.subscribe{
+.subscribe{ 
+    
     margin-left: auto;
 }
-.sub-label{
-    display: flex;
+.subscription{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.sub-label{   
+    margin-right: 12px;
 }
 .sub-input{
+    display: block;
     width: 358px;
-    height: 50px;
-    margin-right: 12px;
+    height: 50px;   
     padding-left: 16px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
@@ -820,8 +832,7 @@ textarea{
     background-color: var(--btnbg-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;   
-    border: 1px solid #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
+    border: 1px solid #000000;     
 }
 
 
