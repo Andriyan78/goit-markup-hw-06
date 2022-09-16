@@ -20,7 +20,7 @@
     --btn-radius: 4px;
     --card-set-gap: 30px;
     --cards-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    --timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .page{
     background-color: var(--btnlet-color);
@@ -87,7 +87,7 @@ textarea{
     font-size: 26px;
     line-height: 1.19;
 }
-.area-link.webstudio{
+.nav-link.webstudio{
     padding-top: 24px;
     padding-bottom: 24px;
     
@@ -98,10 +98,6 @@ textarea{
 .accent-foot{
     color: var(--btnlet-color);
 }
-/* .link:hover,
-.link:focus{
-    color: var(--btnbg-color);
-} */
 .main-nav{
     display: flex;
     align-items: center;
@@ -144,7 +140,7 @@ textarea{
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
-    transition: fill 250ms var(--timing-function), color 250ms var(--timing-function);
+    transition: fill var(--timing-function), color var(--timing-function);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -160,14 +156,14 @@ textarea{
 .header{
     border-bottom: 1px solid var(--border-header);
 }
-.area-link{
+.nav-link{
     position: relative;
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    transition: color 250ms var(--timing-function);
+    transition: color var(--timing-function);
 }
-.area-link.current::after {
+.nav-link.current::after {
     content: '';
     position: absolute;
     left:0;
@@ -221,7 +217,7 @@ textarea{
     /* width: 160px; */
     border-radius: var(--btn-radius);
     border: none;
-    transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+    transition: background-color var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 .request:hover,
 .request:focus{
@@ -235,8 +231,8 @@ textarea{
     height: 100%;  
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: visibility 250ms var(--timing-function), 
-    opacity 250ms var(--timing-function);
+    transition: visibility var(--timing-function), 
+    opacity var(--timing-function);
 }
 .backdrop.is-hidden{
     visibility: hidden;
@@ -252,7 +248,7 @@ textarea{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    transition: transform 250ms var(--timing-function);   
+    transition: transform var(--timing-function);   
     width: 528px;
     padding: 40px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
@@ -313,7 +309,7 @@ textarea{
     letter-spacing: 0.01em;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: outline 250ms var(--timing-function);
+    transition: outline var(--timing-function);
 }
 .form-message{
     display: block;
@@ -331,7 +327,7 @@ textarea{
     left: 10px;    
     display: inline-block;
     
-    transition: fill 250ms var(--timing-function);
+    transition: fill var(--timing-function);
 }
 .form-item:focus-within .form-icon{
     fill: var(--btnbg-color);
@@ -356,12 +352,12 @@ textarea{
 }
 .icon-checked{
     opacity: 0;
-    transition: opacity 250ms var(--timing-function) ;
+    transition: opacity var(--timing-function) ;
     fill: var(--btnbg-color);
 }
 .icon-unchecked{
     opacity: 1;
-    transition: opacity 250ms var(--timing-function);
+    transition: opacity var(--timing-function);
 }
 .form-checkbox:checked + .form-icons .icon-checked{  
     opacity: 1; 
@@ -422,7 +418,7 @@ textarea{
     border-radius: 50%;   
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--btnlet-color); 
-    transition: fill 250ms var(--timing-function);
+    transition: fill var(--timing-function);
     cursor: pointer;
     /* box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
@@ -444,10 +440,10 @@ textarea{
     font-size: 16px;
 }
 .title-features, .hat-title, .title-features-foot,
-.team-title, .sub-head, .name{
+.team-title, .sub-head, .do-title, .product-title{
     text-transform: uppercase;
 }
-.team-title {
+.team-title, .do-title {
     font-weight: 700;
     font-size: 36px;
     line-height: calc(42/36);
@@ -456,14 +452,7 @@ textarea{
     color: var(--h-color);
     margin-bottom: 50px;
 }
-.title-project{
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: var(--h-color);
-    margin-bottom: 4px;
-}
+
 .features{
     font-size: 14px;
     line-height: calc(24/14);
@@ -472,10 +461,10 @@ textarea{
     flex-wrap: wrap;
     gap: 30px;
 }
-.features .item{
+.features .features-item{
     width: 270px;
 }
-.feat-icon{
+.features-icon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -491,7 +480,7 @@ textarea{
 .do-products{
     position: relative;    
 }
-.name{
+.product-title{
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16.41/14);
@@ -526,7 +515,7 @@ textarea{
     width: 270px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition:  box-shadow 250ms var(--timing-function), cursor 250ms var(--timing-function);
+    transition:  box-shadow var(--timing-function), cursor 250ms var(--timing-function);
 }
 .item-team:hover,
 .item-team:focus{
@@ -548,7 +537,7 @@ textarea{
     height: 92px;
     
 }
-.cust-icon {
+.custom-icon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -557,14 +546,14 @@ textarea{
     fill: var(--icon-color);
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    transition:  fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
+    transition:  fill var(--timing-function), border-color var(--timing-function);
 }
-.cust-icon:hover,
-.cust-icon:focus:focus{
+.custom-icon:hover,
+.custom-icon:focus:focus{
     border: 1px solid var(--btnbg-color);    
 }
-.cust-icon:hover,
-.cust-icon:focus {    
+.custom-icon:hover,
+.custom-icon:focus {    
     fill: var(--btnbg-color);    
 }
 .socialmedia{
@@ -582,7 +571,7 @@ textarea{
     background-color: transparent;
     fill: var(--icon-color);
     border-radius: 50%;
-    transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
+    transition: fill var(--timing-function), background-color var(--timing-function);
 }
 .icon:hover,
 .icon:focus{    
@@ -608,10 +597,10 @@ textarea{
     border: none;
     border-radius: var(--btn-radius);
     padding: 6px 22px;
-    transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function), 
-    text-shadow 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function);
+    transition: color var(--timing-function),
+    background-color var(--timing-function), 
+    text-shadow var(--timing-function),
+    box-shadow var(--timing-function);
 }
 .buttons{
     display: flex;
@@ -633,7 +622,15 @@ textarea{
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
-    transition: box-shadow 250ms var(--timing-function);
+    transition: box-shadow var(--timing-function);
+}
+.project-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--h-color);
+    margin-bottom: 4px;
 }
 .project-item{
     width: 370px;
@@ -659,7 +656,7 @@ textarea{
     padding-left: 24px;
     padding-right: 24px;
     transform: translateY(101%); 
-    transition: transform 250ms var(--timing-function);  
+    transition: transform var(--timing-function);  
 }
 .project:hover .product-overlay,
 .project:focus .product-overlay{
@@ -729,7 +726,7 @@ textarea{
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--btnlet-color);
-    transition: color 250ms var(--timing-function);
+    transition: color var(--timing-function);
 }
 .contactmail,
 .contacttel {
@@ -738,9 +735,9 @@ textarea{
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    transition: color 250ms var(--timing-function);
+    transition: color var(--timing-function);
 }
-.mail-cont, .cityadr{
+.contact-mail, .cityadr{
     margin-bottom: 10px;
 }
 .cityaddr:hover,
@@ -770,7 +767,7 @@ textarea{
     border-radius:50%;
     fill: var(--btnlet-color);
     cursor: pointer;
-    transition: background-color 250ms var(--timing-function);
+    transition: background-color var(--timing-function);
 }
 .icon-foot:hover,
 .icon-foot:focus {
@@ -833,10 +830,4 @@ textarea{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;   
     border: 1px solid #000000;     
-}
-
-
-.footer{
-    display: flex;
-    align-items: baseline; 
 }
